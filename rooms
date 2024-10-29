@@ -1,0 +1,207 @@
+# Finds random beginning room and random ending rooms
+
+import random
+while True:
+    position = int(random.randint(1,9))
+    ending = int(random.randint(1,9))
+    bad_ending = int(random.randint(1,9))
+    if position == ending:
+        continue
+    if position == bad_ending or bad_ending == ending:
+        continue
+    if position != bad_ending and position != ending:
+        break
+   
+# Navigate rooms
+print("You have fallen down in to a cave with nine rooms.")
+
+print("Here is your current position:")
+one = (" ----- ----- -----\n|     |     |     |\n|  x  |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+two = (" ----- ----- -----\n|     |     |     |\n|     |  x  |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+three = (" ----- ----- -----\n|     |     |     |\n|     |     |  x  |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+four = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|  x  |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+five = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |  x  |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+six = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |  x  |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
+seven = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|  x  |     |     |\n|     |     |     |\n ----- ----- -----")
+eight = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |  x  |     |\n|     |     |     |\n ----- ----- -----")
+nine = (" ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |  x  |\n|     |     |     |\n ----- ----- -----")
+
+while True:
+   
+    if position == 1:
+        print(one)
+        print("It smells terrible in here.")
+        print("Do you want to go down (D), or to the right (R)?")
+        move = input()
+        if move.upper() == "R":
+            position = 2
+        elif move.upper() == "D":
+            position = 4
+   
+    elif position == 2:
+        print(two)
+        print("It's so dark, You can't see anything.")
+        print("Do you want to go left (L), to the right (R), or down(D)?")
+        move = input()
+        if move.upper() == "L":
+            position = 1
+        elif move.upper() == "R":
+            position = 3
+        elif move.upper() == "D":
+            position = 5
+   
+    elif position == 3:
+        print(three)
+        print("It's getting kind of cold in here.")
+        print("Do you want to go to the left (L), or down (D)?")
+        move = input()
+        if move.upper() == "L":
+            position = 2
+        elif move.upper() == "D":
+            position = 6
+   
+    elif position == 4:
+        print(four)
+        print("It's getting harder to breathe.")
+        print("Do you want to go to the right (R), down (D), or up (U)?")
+        move = input()
+        if move.upper() == "R":
+            position = 5
+        elif move.upper() == "U":
+            position = 1
+        elif move.upper() == "D":
+            position = 7
+   
+    elif position == 5:
+        print(five)
+        print("It's hotter in this area.")
+        print("Do you want to go up (U), to the left (L), to the right (R), or down (D)?")        
+        move = input()
+        if move.upper() == "L":
+            position = 4
+        elif move.upper() == "R":
+            position = 6
+        elif move.upper() == "D":
+            position = 8
+        elif move.upper() == "U":
+            position = 2
+   
+    elif position == 6:
+        print(six)
+        print("This area is really cramped.")
+        print("Do you want to go up (U), to the left (L), or down (D)?")
+        move = input()
+        if move.upper() == "U":
+            position = 3
+        elif move.upper() == "D":
+            position = 9
+        elif move.upper() == "L":
+            position = 5
+   
+    elif position == 7:
+        print(seven)
+        print("Theres a lot of space in this room.")
+        print("Do you want to go up (U), or to the right (R)?")
+        move = input()
+        if move.upper() == "U":
+            position = 4
+        elif move.upper() == "R":
+            position = 8
+   
+    elif position == 8:
+        print(eight)
+        print("It's really dusty in this room.")
+        print("Do you want to go up (U), to the right (R), or to the left (L)?")
+        move = input()
+        if move.upper() == "U":
+            position = 5
+        elif move.upper() == "R":
+            position = 9
+        elif move.upper() == "L":
+            position = 7
+   
+    elif position == 9:
+        print(nine)
+        print("The rocks are sharp in this one.")
+        print("Do you want to go up (U), or to the left (L)?")
+        move = input()
+        if move.upper() == "L":
+            position = 8
+        elif move.upper() == "U":
+            position = 6
+   
+    if position == bad_ending:
+        if bad_ending == 1:
+            print(one)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 2:
+            print(two)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 3:
+            print(three)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 4:
+            print(four)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 5:
+            print(five)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 6:
+            print(six)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 7:
+            print(seven)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 8:
+            print(eight)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+        if bad_ending == 9:
+            print(nine)
+            print("You chose the wrong room. You never got out of the cave.")
+            break
+       
+    if position == ending:
+        if ending == 1:
+            print(one)
+            print("You see the light! You are free!")
+            break
+        elif ending == 2:
+            print(two)
+            print("You see the light! You are free!")
+            break
+        elif ending == 3:
+            print(three)
+            print("You see the light! You are free!")
+            break
+        elif ending == 4:
+            print(four)
+            print("You see the light! You are free!")
+            break
+        elif ending == 5:
+            print(five)
+            print("You see the light! You are free!")
+            break
+        elif ending == 6:
+            print(six)
+            print("You see the light! You are free!")
+            break
+        elif ending == 7:
+            print(seven)
+            print("You see the light! You are free!")
+            break
+        elif ending == 8:
+            print(eight)
+            print("You see the light! You are free!")
+            break
+        elif ending == 9:
+            print(nine)
+            print("You see the light! You are free!")
+            break
