@@ -13,7 +13,7 @@ while True:
         break
    
 # Navigate rooms
-print("You have fallen down in to a cave with nine rooms.")
+print("You have been kidnapped by the beast, find a way to escape!")
 
 print("Here is your current position:")
 one = (" ----- ----- -----\n|     |     |     |\n|  x  |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----\n|     |     |     |\n|     |     |     |\n|     |     |     |\n ----- ----- -----")
